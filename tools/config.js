@@ -27,13 +27,23 @@ export default {
         'woff2?'
     ],
 
+    tools: {
+        src: 'tools/**/*'
+    },
+
     templates: {
         main: 'src/index.html'
     },
 
     styles: {
         src: ['src/styles/app.scss'],
-        dest: 'dist/styles'
+        dest: 'dist/styles',
+        options: {
+            sass: {outputStyle: 'compressed'},
+            autoprefixer: {
+                browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+            }
+        }
     },
 
     assets: {

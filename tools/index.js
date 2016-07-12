@@ -5,7 +5,7 @@ import CacheBuster          from 'gulp-cachebust';
 
 global.browserSync = require('browser-sync').create();
 
-const tasks = fs.readdirSync('./gulp/tasks/').filter(onlyScripts);
+const tasks = fs.readdirSync('./tools/tasks/').filter(onlyScripts);
 
 global.cachebust = new CacheBuster();
 
