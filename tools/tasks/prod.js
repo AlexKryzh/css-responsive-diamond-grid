@@ -1,11 +1,11 @@
 import gulp                           from 'gulp';
 import runSequence             from 'run-sequence';
 
-gulp.task('dev', function(cb) {
+gulp.task('prod', function(cb) {
 
     cb = cb || function() {};
 
-    global.env = 'dev';
+    global.env = 'prod';
 
     runSequence(
         [
@@ -20,9 +20,6 @@ gulp.task('dev', function(cb) {
         [
             'copy:MainIndex'
         ],
-        [
-            'watch:Files'
-        ], 
         cb
     );
 

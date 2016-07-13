@@ -39,7 +39,10 @@ export default {
         src: ['src/styles/app.scss'],
         dest: 'dist/styles',
         options: {
-            sass: {outputStyle: 'compressed'},
+            sass: {
+                dev: {outputStyle: 'expanded'},
+                prod: {outputStyle: 'compressed'}
+            },
             autoprefixer: {
                 browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
             }
