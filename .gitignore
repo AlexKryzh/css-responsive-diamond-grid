@@ -9,6 +9,9 @@ logs
 *.log
 npm-debug.log*
 
+# Dist folder
+dist
+
 # Runtime data
 pids
 *.pid
